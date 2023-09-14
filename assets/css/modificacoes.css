@@ -1,0 +1,164 @@
+.caixa{
+    margin: auto;
+    border: solid red 1px;
+    width: 410px;
+    height: 650px;
+}
+.caixaConteudo{
+    padding: 60px;
+}
+@media (max-width: 450px) { 
+    .caixaConteudo{
+        padding-top: 20px;
+    }
+}
+.caixaItem{
+    width: 1300px;
+    height: 605px;
+}
+.fs-logo {
+    font-size: 4rem !important;
+  }
+.corbody{
+    background-color: #F4F4F4;
+}
+
+.corimg{
+    background-color: #F4F4F4;
+}
+.corbotao{
+    background-color: #929292;
+}
+.btnImg {
+    border-color: black;
+  }
+.btnImg:hover {
+    border-color: rgb(75, 216, 240);
+    background-color: #76eff6;
+    color: black;
+}
+.btnImgConteudo {
+    border-color: black;
+}
+.btnImgConteudo:hover {
+    border-color: rgb(75, 216, 240);
+    background-color: #76eff6;
+}
+
+.botao-index-conteudo{
+    margin-top: 15px;
+    padding: 20px;  
+}
+.botaoConteudo{
+    margin: 35px;
+    padding: 20px;
+}
+.container-shadow{
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+}
+.edi-container-direita-baixo{
+    box-shadow: rgba(0, 195, 255, 0.4) 5px 5px, rgba(0, 195, 255, 0.3) 10px 10px, rgba(0, 195, 255, 0.2) 15px 15px, rgba(0, 195, 255, 0.1) 20px 20px, rgba(0, 195, 255, 0.05) 25px 25px;
+    transition: all .3s;
+}
+.edi-container-meio-baixo{
+    box-shadow: rgba(0, 195, 255, 0.4) 0px 5px, rgba(0, 195, 255, 0.3) 0px 10px, rgba(0, 195, 255, 0.2) 0px 15px, rgba(0, 195, 255, 0.1) 0px 20px, rgba(0, 195, 255, 0.05) 0px 25px;
+    transition: all .3s;
+}
+.edi-container-esquerda-baixo{
+    box-shadow: rgba(0, 195, 255, 0.4) -5px 5px, rgba(0, 195, 255, 0.3) -10px 10px, rgba(0, 195, 255, 0.2) -15px 15px, rgba(0, 195, 255, 0.1) -20px 20px, rgba(0, 195, 255, 0.05) -25px 25px 25px 25px;   
+    transition: all .3s;
+}
+.edi-container-meio-baixo:hover,.edi-container-direita-baixo:hover,.edi-container-esquerda-baixo:hover{
+    transform: scale(1.050);
+}
+
+header.container-fluid{
+    padding: 0;
+}
+
+.custom-loader {
+    margin-left: 15px;
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    padding:3px;
+    background: 
+      radial-gradient(farthest-side,#766DF4 95%,#0000) 50% 0/12px 12px no-repeat,
+      radial-gradient(farthest-side,#0000 calc(100% - 5px),#766DF4 calc(100% - 4px)) content-box;
+    animation:s6 2s infinite ;
+    transition: all .3s;
+  }
+  @keyframes s6 {to{transform: rotate(1turn)}}
+.hide {
+    display: none !important;
+
+}
+.content-btn{
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+
+/*
+X-Small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
+
+// Small devices (landscape phones, 576px and up)
+*/  
+@media (min-width: 1200px) and (max-width: 2200px) { 
+    img.img{
+        width: 190px;
+        padding: 15px 0;
+    }
+   
+}
+@media (max-width: 913px) { 
+ 
+    .caixaConteudo{
+        margin-top: 50px;
+        padding: 10px;
+    }
+}
+@media (max-width: 821px) {
+   nav,button{
+    padding: auto;
+   }
+    .caixaConteudo{
+        margin-top: 50px;
+        padding: 10px;
+    }
+    .edi-container-direita-baixo{
+        box-shadow: rgba(0, 195, 255, 0.4) 0px 5px, rgba(0, 195, 255, 0.3) 0px 10px, rgba(0, 195, 255, 0.2) 0px 15px, rgba(0, 195, 255, 0.1) 0px 20px, rgba(0, 195, 255, 0.05) 0px 25px;
+    }
+    .edi-container-esquerda-baixo{
+        box-shadow: rgba(0, 195, 255, 0.4) 0px 5px, rgba(0, 195, 255, 0.3) 0px 10px, rgba(0, 195, 255, 0.2) 0px 15px, rgba(0, 195, 255, 0.1) 0px 20px, rgba(0, 195, 255, 0.05) 0px 25px;
+    }
+}
+@media (max-width: 576px) { 
+    img.img{
+        width: 190px;
+        padding: 15px 0;
+    }
+    .caixaConteudo{
+        margin-top: 0px;
+         
+    }
+    button.fs-logo{
+        font-size: calc(1.375rem + 1.5vw) !important ;
+    }
+}
+
+
+/* Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { }
+
+/* Large devices (desktops, 992px and up)
+@media (min-width: 992px) { }
+
+/* X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { }
+
+/* XX-Large devices (larger desktops, 1400px and up)*
+@media (min-width: 1400px) { }
+*/

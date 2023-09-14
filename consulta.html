@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Consultar Cadastro</title>
+
+        <link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/modificacoes.css">
+        <script src="assets/javascp/javascp.js"></script>
+    </head>
+    <body onload="consultaCadastro()" class="corbody">
+        <header class="container-fluid">
+            <div class="row bg-info"><!-- ==========INICIO LOGO==========   -->
+                <div class="col-sm-4 col-md-4 m-auto">
+                    <div class=" text-center">
+                        <a href="index.html">
+                             <img src="Img/img_logo.png" class="img img-fluid btn btn-info">
+                        </a>  
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 m-auto text-center ">
+                    <div class="">
+                       <a href="index.html">
+                            <button type="button" class="btn btn-info text-center text-capitalize fs-logo fw-semibold">
+                                Cadastro facil
+                            </button>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-2 col-md-4 m-auto" >
+                    <nav class="navbar navbar-expand-lg"><!-- ==========INICIO NAVEGACAO==========   -->
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarIconeIndex" aria-controls="navbarIconeIndex" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                          </button>
+                        <div class="collapse navbar-collapse" id="navbarIconeIndex" >
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item text-end">
+                                    <a class="nav-link" href="cadastro.html">
+                                        <button class="btn btnImg border border-dark fw-semibold p-2" text-start fw-semibold">
+                                            Cadastrar Dados
+                                        </button>
+                                    </a>
+                                </li>
+                                <li class="nav-item text-end">
+                                    <a class="nav-link" href="#">
+                                        <button class="btn btnImg active border border-dark fw-semibold p-2">
+                                            Consultar Cadastro
+                                        </button>
+                                    </a>
+                                </li>
+                                <li class="nav-item text-end">
+                                    <a class="nav-link" href="validacao.html">
+                                        <button class="btn btnImg border border-dark fw-semibold p-2">
+                                            Validar Dados
+                                        </button>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav> <!-- ==========FIM NAVEGACAO==========   -->
+                </div>
+            </div><!-- ==========FIM LOGO==========   -->
+        </header>
+
+        <section>
+            <div class="container p-5 mt-5 container-shadow">
+                <form>
+                    <div>
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <label for="nometitular">Nome Completo</label>
+                                <input type="text" class="form-control" id="nometitular" placeholder="Digite o seu nome...">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="cpf">CPF</label>
+                                <input type="text" class="form-control" id="cpf" placeholder="000.000.000.00">
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="form-group col-md-6">
+                                <label for="estadonascimento">Estado de Nascimento</label>
+                                <select class="form-select" id="estadonascimento">
+                                    <option value="" selected>Selecione sua UF</option>
+                                    <option value="BA">Bahia</option>
+                                    <option value="RN">Rio Grande do Norte</option>
+                                    <option value="RJ">Rio Grande do Janeiro</option>
+                                    <option value="MG">Minas Gerais</option>
+                                    <option value="SP">São Paulo</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="nascimento">Data de Nascimento</label>
+                                <input type="date" class="form-control" id="nascimento">
+                            </div>
+                        </div>
+                        <div class="content-btn"> 
+                            <button type="button" id="botaocadastro" onclick="filtrarCadastros()" class="btn btn-info btnImg">FILTRAR<img class="mx-3" style="width: 40px;" src="Img/lupa.png"></button>
+                            <div class="custom-loader load-filter hide"></div>
+                        </div>
+                        
+                    </div>
+                  </form>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="table-responsive">
+                    <table class="table table-hover mt-5">
+                        <thead class="border border-dark">
+                            <tr>
+                                <th scope="col">N°</th>
+                                <th scope="col">Nome Usuario</th>
+                                <th scope="col">Nome do Pai</th>
+                                <th scope="col">Nome da Mãe</th>
+                                <th scope="col">Estado de Nascimento</th>
+                                <th scope="col">Estado Cívl</th>
+                                <th scope="col">CPF</th>
+                                <th scope="col">Data de Nascimento</th>
+                                <th scope="col">Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody class="border border-info" id="listaCadastro" style="font-size: 14px;">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <script src="assets/bootstrap/jQuery.js"></script>
+        <script src="assets/bootstrap/js/bootstrap.js"></script>
+    </body>
+</html>
